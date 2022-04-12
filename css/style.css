@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    /* White */
+--White: hsl(0, 0%, 100%); 
+--Light-gray: hsl(212, 45%, 89%);
+--Grayish-blue: hsl(220, 15%, 55%);
+--Dark-blue: hsl(218, 44%, 22%);
+}
+
+
 body {
-    background-color: #ffffff;
+    background-color: var(--Light-gray);
 }
 
 * {
@@ -16,7 +27,7 @@ body {
 }
 
 .container .card {
-    background-color: whitesmoke;
+    background-color: var(--White);
     width: 275px;
     display: flex;
     flex-direction: column;
@@ -30,17 +41,40 @@ body {
 
 
 .container .card .card-text {
-    text-align: center;
     padding: 15px 0;
 }
 
 .container .card .card-text h1 {
-    font-weight: 600;
+    color: var(--Dark-blue);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
     font-size: 1.2rem;
 }
 
 .container .card .card-text p {
+    color: var(--Grayish-blue);
     font-size: 15px;
     font-weight: 300;
     padding-top: 12px;
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px  */
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1440px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container .card {
+        display: flex;
+        width: 0 auto;
+    }
 }
