@@ -36,6 +36,8 @@ body {
 }
 
 .container .card img {
+    width: 242px;
+    height: 242px;
     border-radius: 10px;
 }
 
